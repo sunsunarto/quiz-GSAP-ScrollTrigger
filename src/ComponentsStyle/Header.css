@@ -1,0 +1,38 @@
+.mainHeader{
+    background-color: yellow;
+}
+.buttonContainer{
+    position: fixed;
+    width: 100px;
+    top: 20px;
+    right: 20px;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    z-index: 9999;
+
+}
+.button{
+    color: black;
+    padding: 5px;
+    border: 2px black solid;
+    background-color: transparent;
+}
+.text{
+    color: black;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.silde1{
+    top: 20px;
+
+}
+
+.organization{
+    font-size: 20px;
+    color: black;
+}

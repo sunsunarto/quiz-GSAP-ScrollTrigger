@@ -1,0 +1,27 @@
+.projectCon{
+    background-color: #3E88FF;
+    color: white;
+    text-align: start;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+
+.project1{
+    background-color: #000000;
+}
+.project2{
+    background-color: #31BE32;
+}
+.project3{
+    background-color: #FF97D0;
+
+}
+.border{
+    border: white 5px solid;
+    padding: 50px;
+}

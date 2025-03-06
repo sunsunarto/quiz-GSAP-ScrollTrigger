@@ -1,0 +1,16 @@
+.heroSection{
+    text-align: start;
+    color: black;
+    padding: 50px;
+    background-color: white;
+}
+.textPin{
+    border-left: 5px pink solid;
+    font-style: italic;
+    margin:  0px 70px;
+}
+iframe{
+    width: 900px;
+    height: 400px;
+    text-align: center;
+}
