@@ -3,6 +3,7 @@ import './App.css'
 import Header from './Components/Header.jsx'
 import HeroSection from './Components/HeroSection.jsx'
 import Project from './Components/Project.jsx'
+import ButtonDonate from './Components/ButtonDonate.jsx'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Header/>
       <HeroSection/>
       <Project/>
+      <ButtonDonate/>
     </>
   )
 }

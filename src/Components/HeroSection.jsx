@@ -14,7 +14,7 @@ function HeroSection() {
                     <p className="textPin">"Animals need to have friends. Just like humans."<br/>- James Herriot, All Creatures Great and Small</p>
                     <p>Who else if not we should support our younger brothers, especially in difficult times? Let's be friends!</p>
                 </div>
-                <iframe src="https://www.youtube.com/watch?v=5Wk1rp99B7o&ab_channel=ISA" frameborder="0"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=5Wk1rp99B7o&ab_channel=ISA" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     );

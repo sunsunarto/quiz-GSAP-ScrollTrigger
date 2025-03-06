@@ -3,12 +3,34 @@ import {gsap} from 'gsap';
 import "../ComponentsStyle/Project.css";
 function Project() {
 
+    const tansRef1 = useRef(null);
+    const tansRef2 = useRef(null);
+    const tansRef3 = useRef(null);
     const button1Ref = useRef(null);
     const button2Ref = useRef(null);
     const button3Ref = useRef(null);
 
     useEffect(() => { //project1
         const handleEnter1 = () => {
+            gsap.fromTo(
+                tansRef1.current,
+                { x: 0, y: -200, opacity: 0 }, 
+                {
+                  y: 0, 
+                  duration: 1, 
+                  opacity: 1,
+                  delay: 1,
+                  ease: "power2.inOut", 
+                  scrollTrigger: { 
+                    trigger: ".project1", 
+                    start: "top top", 
+                    end: "bottom bottom", 
+                    pin: true, 
+                    scrub: 5, 
+                    markers: true
+                  },
+                }
+              );
             gsap.to(button1Ref.current,{
                 duration: 0.5,
                 x: 10,
@@ -110,7 +132,7 @@ function Project() {
                     <p>are very different in terms of priority, scale and complexity of implementation</p>    
                 </div>
             </div>
-            <div className="project project1" >
+            <div className="project project1" ref={tansRef1}>
                 <div className="border" ref={button1Ref}>
                 <h1>Emergency Aid. WAR 2022.</h1>
                 <p>providing food and medicine to the shelters and animals whitch lost homes and families due to the war</p>

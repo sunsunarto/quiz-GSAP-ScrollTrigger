@@ -6,42 +6,11 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 function Header() {
 
-    const buttonRef = useRef(null);
     const image1Ref = useRef(null);
     const image2Ref = useRef(null);
     const textRef = useRef(null);
-
-    useEffect(() => { //button donate
-        const handleEnter = () => {
-            gsap.to(buttonRef.current, {
-                duration: 0.5,
-                x: 5,
-                y: -5,
-                ease: "power2.inOut",
-            });
-        };
-
-        const handleLeave = () => {
-            gsap.to(buttonRef.current, {
-                duration: 0.5,
-                x: 0,
-                y: 0,
-                ease: "power2.inOut",
-            });
-        };
-
-        if(buttonRef.current) {
-            buttonRef.current.addEventListener("mouseenter", handleEnter);
-            buttonRef.current.addEventListener("mouseleave", handleLeave);
-        }
-
-        return () => {
-            if(buttonRef.current) {
-                buttonRef.current.removeEventListener("mouseenter", handleEnter);
-                buttonRef.current.removeEventListener("mouseleave", handleLeave);
-            }
-        }
-    }, []);
+    const textIconRef = useRef(null);
+    const iconMediaRef = useRef(null);
 
     useEffect(() => { //slideshow
         const images = [image1Ref.current, image2Ref.current];
@@ -52,17 +21,28 @@ function Header() {
           .to(image2Ref.current, {y: 0, opacity: 1, duration: 1,height: 100}, '-=0.5') 
           .to(image2Ref.current, {y: 100, opacity: 0, duration: 1, delay: 1, height: 0}, );
     }, []);
-    useEffect(() => {
+
+    useEffect(() => { //text h1
+        gsap.fromTo(
+            textRef.current,
+            { x: 100, y: 0, opacity: 0 }, 
+            {
+              x: 0, 
+              duration: 1, 
+              opacity: 1,
+              ease: "power1.inOut"
+            }
+        )
         gsap.fromTo(
           textRef.current,
           { x: 0, y: 0 }, 
           {
             x: 400, 
-            duration: 2, 
+            duration: 1, 
             delay: 1,
             ease: "power2.inOut", 
             scrollTrigger: { 
-              trigger: ".text", 
+              trigger: ".mainHeader", 
               start: "bottom top", 
               end: "bottom bottom", 
               pin: true, 
@@ -72,13 +52,69 @@ function Header() {
           }
         );
       }, []);
+
+      useEffect(() => { //text p
+        gsap.fromTo(
+            textIconRef.current,
+            { x: 0, y: 200 }, 
+            {
+              y: 0, 
+              duration: 1, 
+              ease: "power2.inOut", 
+            }
+        )
+        gsap.fromTo(
+          textIconRef.current,
+          { x: 0, y: 0 }, 
+          {
+            y: 400, 
+            duration: 1, 
+            delay: 1,
+            ease: "power2.inOut", 
+            scrollTrigger: { 
+              trigger: ".mainHeader", 
+              start: "bottom top", 
+              end: "bottom bottom", 
+              pin: true, 
+              scrub: 5, 
+              markers: true
+            },
+          }
+        );
+      }, []);
+
+      useEffect(() => { //icon
+        gsap.fromTo(
+            iconMediaRef.current,
+            { x: 0, y: 200, opacity: 0 }, 
+            {
+              y: 0, 
+              duration: 1,
+              opacity: 1, 
+              ease: "power2.inOut", 
+            }
+        )
+        gsap.fromTo(
+          iconMediaRef.current,
+          { x: 0, y: 0, opacity: 1 }, 
+          {
+            y: 200, 
+            duration: 1,
+            opacity: 0, 
+            delay: 1,
+            ease: "power2.inOut", 
+            scrollTrigger: { 
+              trigger: ".mainHeader", 
+              start: "bottom top",
+              end: "bottom bottom", 
+              scrub: 5, 
+              markers: true
+            },
+          }
+        );
+      }, []);
     return (
         <div className="mainHeader">
-            <div className="buttonContainer">
-                <div className="button" ref={buttonRef}>
-                    <h1>Donate</h1>
-                </div>
-            </div>
             <div className="text">
                 <div className="slideShow" style={{position: "relative", width: "150px", height: "150px"}}>
                     <div className="slide slide1" ref={image1Ref}>
@@ -92,9 +128,16 @@ function Header() {
                 <h1 ref={textRef}>Innovative<br/>Solutions<br/>for Animals</h1>
                 </div>
             </div>
-            <div className="organization">
+            <div className="organization" ref={textIconRef}>
                 <br/>
                 <p>charity organization</p>
+            </div>
+            <div className="iconMedia" ref={iconMediaRef}>
+                <img src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/6274433d06989d76edcff015_9055867_youtube_bxl.svg" alt="youtube" />
+                <img src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/6274449bf840c377311f2e08_9055851_instagram_bxl.svg" alt="instagram" />
+                <img src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/627443d78de17d2c59c8352c_9055795_facebook_bxl.svg" alt="facebook" />
+                <img src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/6274440c6a0ab7631dce0cd1_9055888_patreon_bxl.svg" alt="patreon" />
+                <img src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/627443f9ac91b492e4c220ba_9055800_telegram_bxl.svg" alt="telegram" />
             </div>
         </div>
     );

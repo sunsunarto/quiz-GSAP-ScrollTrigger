@@ -1,0 +1,17 @@
+.buttonContainer{
+    position: fixed;
+    width: 100px;
+    top: 20px;
+    right: 20px;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    z-index: 9999;
+    
+}
+.button{
+    color: black;
+    padding: 5px;
+    border: 2px black solid;
+    background-color: transparent;
+}
