@@ -35,10 +35,11 @@ function Header() {
         )
         gsap.fromTo(
           textRef.current,
-          { x: 0, y: 0 }, 
+          { x: 0, y: 0,  opacity: 1 }, 
           {
-            x: 400, 
-            duration: 1, 
+            x: 200, 
+            duration: 1,
+            opacity: 0, 
             delay: 1,
             ease: "power2.inOut", 
             scrollTrigger: { 

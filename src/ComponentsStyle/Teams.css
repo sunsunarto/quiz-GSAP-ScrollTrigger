@@ -1,0 +1,18 @@
+.teamsCon{
+    color: black;
+}
+.teams{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.teams img{
+    width: 200px;
+    height: 200px;
+}
+.team{
+    background-color: yellow;
+    border: 5px solid black;
+    max-width: 250px;
+    max-height: 300px;
+}

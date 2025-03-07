@@ -1,0 +1,44 @@
+.helpShelter{
+    background-color: #FCF944;
+    color: black;
+    text-align: start;
+    padding: 50px;
+}
+.shelterCon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.shelterCard{
+    width: 200px;
+    height: 60px;
+    background-color: white;
+    ;
+
+}
+.shelterCardText{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    border: 2px black solid;
+    justify-content: center;
+}
+.buttonHelp{
+    margin-top: 20px;
+}
+.buttonHelp button{
+    background-color: #FF97D0;
+    color:black;
+    padding: 5px;
+    border: 2px black solid;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.buttonHelp img{
+    width: 20px;
+    height: 20px;
+}
