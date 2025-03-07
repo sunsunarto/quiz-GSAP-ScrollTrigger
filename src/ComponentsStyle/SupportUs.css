@@ -1,0 +1,19 @@
+.supportUsContainer {
+    background-color: #FF97D0;
+    padding: 40px;
+    text-align: center;
+    color : black;
+}
+.supportUsinfo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.peoples{
+    max-width: 250px;
+    max-height: 400px;
+}
+.peoples img{
+    max-width: 200px;
+    max-height: 200px;
+}

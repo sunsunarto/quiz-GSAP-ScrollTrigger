@@ -1,0 +1,19 @@
+.PartnersCon{
+    color: black;
+    text-align: start;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.partnersImg{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+}
+.partnersImg img{
+    max-width: 100px;
+    max-height: 100px;
+}

@@ -1,0 +1,34 @@
+.footerCon{
+    background-color: #31BE32;
+    padding: 40px 50px;
+    text-align: center;
+    color : black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.textAndIcons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.footerImg Img{
+    min-width: 100px;
+    min-height: 100px;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.icons img{
+    gap: 10px;
+    width: 30px;
+    height: 30px;
+}

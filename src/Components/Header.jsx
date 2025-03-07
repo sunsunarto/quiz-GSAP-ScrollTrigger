@@ -78,7 +78,6 @@ function Header() {
               end: "bottom bottom", 
               pin: true, 
               scrub: 5, 
-              markers: true
             },
           }
         );
@@ -109,7 +108,6 @@ function Header() {
               start: "bottom top",
               end: "bottom bottom", 
               scrub: 5, 
-              markers: true
             },
           }
         );

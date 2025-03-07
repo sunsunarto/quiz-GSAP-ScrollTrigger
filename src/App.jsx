@@ -5,6 +5,9 @@ import HeroSection from './Components/HeroSection.jsx'
 import Project from './Components/Project.jsx'
 import HelpShelter from './Components/HelpShelter.jsx'
 import Teams from './Components/Teams.jsx'
+import SupportUs from './Components/SupportUs.jsx'
+import Partners from './Components/Partners.jsx'
+import Footer from './Components/Footer.jsx'
 import ButtonDonate from './Components/ButtonDonate.jsx'
 
 function App() {
@@ -16,6 +19,11 @@ function App() {
       <Project/>
       <HelpShelter/>
       <Teams/>
+      <br/>
+      <SupportUs/>
+      <br/>
+      <Partners/>
+      <Footer/>
       <ButtonDonate/>
     </>
   )

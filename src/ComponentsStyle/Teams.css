@@ -1,14 +1,21 @@
 .teamsCon{
     color: black;
 }
+.teamCon{
+    display: flex;
+    justify-content: center;
+}
 .teams{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+.info{
+    padding: 20px;
+}
 .teams img{
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 .team{
     background-color: yellow;
