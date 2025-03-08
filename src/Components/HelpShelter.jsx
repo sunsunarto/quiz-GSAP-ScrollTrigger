@@ -156,6 +156,7 @@ function HelpShelter() {
         <p>homeless packs, volunteers, guardians, overstayers, shelter, and other organisations.</p>
         <br/>
       </div>
+      <div className='sheltercenter'>
       <div className="shelterCon">
         {shelterName.map((shelter, index) => (
           <div key={index} className="shelterCard">
@@ -164,6 +165,7 @@ function HelpShelter() {
             </div>
           </div>
         ))} 
+      </div>
       </div>
       <div className='buttonHelp' ref={buttoHelpRef}>
         <button ref={buttonRef}>apply for help <img style={{width: '35px', height: '20px', transform: 'rotate(180deg)'}} src="https://cdn.prod.website-files.com/62640d8cb86529032eccb9d1/6273a272fe3407579aa3d6c9_PngItem_344959.png" alt="" /></button>

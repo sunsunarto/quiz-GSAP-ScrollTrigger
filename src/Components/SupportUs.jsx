@@ -32,6 +32,7 @@ function SupportUs() {
                 <h1>Socially active citizens</h1>
                 <p>support us</p>
             </div>
+            <div className="supportUsCenter">
             <div className="supportUsinfo">
                 <div className="peoples">
                     <img src="https://cdn.prod.website-files.com/6264607e95d7be676470ea8d/628398012a964488bb09078d_13.jpg" alt="" />
@@ -103,6 +104,7 @@ function SupportUs() {
                     <h6>Anastasia Nesterenko</h6>
                     <p>theater and film actress</p>
                 </div>
+            </div>
             </div>
         </div>
     );

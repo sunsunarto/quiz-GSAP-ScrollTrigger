@@ -1,8 +1,13 @@
 .supportUsContainer {
     background-color: #FF97D0;
     padding: 40px;
-    text-align: center;
     color : black;
+}
+.suportUsCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .supportUsinfo{
     display: grid;
@@ -16,4 +21,23 @@
 .peoples img{
     max-width: 200px;
     max-height: 200px;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .supportUsinfo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    
+    .supportUsinfo{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    
 }

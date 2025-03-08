@@ -4,6 +4,12 @@
     text-align: start;
     padding: 50px;
 }
+.sheltercenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
 .shelterCon{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,4 +47,21 @@
 .buttonHelp img{
     width: 20px;
     height: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .shelterCon{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .shelterCon{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
 }

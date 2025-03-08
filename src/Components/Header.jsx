@@ -48,7 +48,6 @@ function Header() {
               end: "bottom bottom", 
               pin: true, 
               scrub: 5, 
-              markers: true
             },
           }
         );
